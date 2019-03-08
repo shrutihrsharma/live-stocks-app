@@ -51,7 +51,8 @@ document.body.onload = () => {
 setupWebsocket = () => {
     if('WebSocket' in window || 'MozWebSocket' in window) {
         console.log('WebSocket is supported by this browser');
-        let ws = new WebSocket("ws://stocks.mnet.website");
+        // WSS and not WS :(
+        let ws = new WebSocket("wss://stocks.mnet.website");
         ws.onopen = onWsOpen;
         ws.onmessage = onWsMessage;
         ws.onclose = onWsClose;
@@ -112,7 +113,6 @@ computeDataForGrid = (data) => {
                 stock.isFirstUpdate = false;
                 stock.isStockPriceUp = stock.price > gridData[idx].price ? true : false;
                 gridData[idx] = stock;
-                console.log(stock);
             }
         });
         gridOptions.api.setRowData(gridData);
