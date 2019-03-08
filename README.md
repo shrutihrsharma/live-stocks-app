@@ -10,3 +10,6 @@ For css, I have used *bootdtrap* css library.
 For friendly readable time and auto refresh, I have used *timeago* library.
 
 Not added any other enhancements.
+
+You can run this project on express server using command:
+    npm run start
