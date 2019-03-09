@@ -10,6 +10,9 @@ let columnDefs = [
         headerName: "Price",
         field: "price",
         width: 350,
+        cellRenderer: function(params) {
+            return params.data.price.toFixed(3)+ ' USD';
+        },
         cellClass: function(params) {
             if(params.data.isFirstUpdate) {
                 return '';
