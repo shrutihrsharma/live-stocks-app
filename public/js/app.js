@@ -51,7 +51,7 @@ document.body.onload = () => {
 setupWebsocket = () => {
     if('WebSocket' in window || 'MozWebSocket' in window) {
         console.log('WebSocket is supported by this browser');
-        // WSS and not WS :(
+        // I don't know if the server is configured for wss because even wss isnt working.
         let ws = new WebSocket("wss://stocks.mnet.website");
         ws.onopen = onWsOpen;
         ws.onmessage = onWsMessage;

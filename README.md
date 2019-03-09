@@ -13,3 +13,11 @@ Not added any other enhancements.
 
 You can run this project on express server using command:
     npm run start
+
+
+Changing websocket url to wss instead of ws.
+Connecting to *wss://stocks.mnet.website* to this websocket url unstead of ws on. Server needs to be configured to accept this request. I couldn't find any other workaround for this.
+
+So my solution wont work on github pages as there, you hae to enforce https. 
+I tried deploying over custom domain also, but kept getting some or the other error.
+Try running it locally without wss, it works.
